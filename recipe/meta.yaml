@@ -1,26 +1,28 @@
 {% set name = "mpl-template" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mpl_template-{{ version }}.tar.gz
-  sha256: 4428d4359506804f3f6f7d178ab9f33be7efa7656ea2e8bcf0f71eaee42fbc91
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mpl_template-{{ version }}.tar.gz
+  sha256: 27ba913690079ac0766fcf36313a539434b4c4700690e211b2dec1ea185087fd
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
+    - setuptools >=64.0
+    - wheel
     - pip
   run:
-    - python >=3.8
-    - matplotlib-base
+    - python >=3.9
+    - matplotlib-base >=2.5.0
 
 test:
   imports:
