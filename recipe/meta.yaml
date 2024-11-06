@@ -1,5 +1,5 @@
 {% set name = "mpl-template" %}
-{% set version = "0.4.2" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mpl_template-{{ version }}.tar.gz
-  sha256: 7779c4ce2c7e7e4e91ceed8b35603396672f1b7a8683c0a560766c375f54854b
+  sha256: 33bd3f80160dfa39dcc341384cc5dd0c44d30b15a967723cfdf49c5d78a5ac3c
 
 build:
   noarch: python
