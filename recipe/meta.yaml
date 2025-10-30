@@ -1,6 +1,6 @@
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 {% set name = "mpl-template" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mpl_template-{{ version }}.tar.gz
-  sha256: 9d5eac1da9b4a4cba6d7b2377d8c86799812c7a76caa680aef3581c822a59be9
+  sha256: 30ce148144f28b3b5e23d0d119ee7962c3c01f8fc11933819bb791ea6c4b0bca
 
 build:
   noarch: python
